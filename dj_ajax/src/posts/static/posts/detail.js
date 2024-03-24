@@ -98,10 +98,8 @@ deleteForm.addEventListener("submit", e=>{
             'csrfmiddlewaretoken': csrf[0].value,
         },
         success: function(response){
-            console.log(response);
-            handleAlerts('success', 'post has been updated');
-            title.textContent = response.title;
-            body.textContent = response.body;
+            window.location.href = window.location.origin
+            localStorage.setItem('title', titleInput.value);
         },
         error: function(error) {
             console.log(error);
