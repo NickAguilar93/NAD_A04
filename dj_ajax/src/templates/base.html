@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  
+
     <!-- favicon -->
     <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}"/>
 
@@ -15,6 +17,10 @@
     <!-- Custom css -->
     <link rel="stylesheet" href="{% static 'style.css' %}">
 
+    <!--Dropzone-->
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+    
     <!-- Custom js -->
     <script src="{% static 'functions.js' %}" defer></script>
     {% block scripts %}
