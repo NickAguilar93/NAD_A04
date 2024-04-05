@@ -1,1 +1,1 @@
-web: gunicorn src.app:app
+web: gunicorn src.posts_proj.wsgi:application
