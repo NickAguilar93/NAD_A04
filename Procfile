@@ -1,2 +1,1 @@
-web: gunicorn posts_proj.wsgi --log-file -
-
+web: gunicorn posts_proj.wsgi:application
