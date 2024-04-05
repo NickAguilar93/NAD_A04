@@ -1,1 +1,2 @@
-web: gunicorn web: python3 ./src/manage.py runserver
+web: gunicorn posts_proj.wsgi --log-file -
+
