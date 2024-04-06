@@ -173,18 +173,20 @@ SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+AZURE_STATIC_CONTAINER = 'static'
+AZURE_MEDIA_CONTAINER = 'media'
+
 AZURE_ACCOUNT_NAME = 'blob04'
 AZURE_ACCOUNT_KEY = 'l+qhd15lr6r1AbMxW0ZbhlSMWT8kEodJ1zcyS5stKfI5pRMijRpARoGHwyzRw6ApGyV0w0MZxjjP+AStaDqJYw=='
-AZURE_CONTAINER = 'media'
-AZURE_STATIC_CONTAINER = 'static'
-DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
-STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 
-# Static files (CSS, JavaScript, Images)
+
+STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+
 STATIC_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{AZURE_STATIC_CONTAINER}/'
 
 # Media files (uploads)
-MEDIA_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{AZURE_CONTAINER}/'
+MEDIA_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{AZURE_MEDIA_CONTAINER}/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
