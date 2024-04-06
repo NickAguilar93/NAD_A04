@@ -171,12 +171,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 AZURE_ACCOUNT_NAME = 'blob04'
 AZURE_ACCOUNT_KEY = 'l+qhd15lr6r1AbMxW0ZbhlSMWT8kEodJ1zcyS5stKfI5pRMijRpARoGHwyzRw6ApGyV0w0MZxjjP+AStaDqJYw=='
 AZURE_STATIC_CONTAINER = 'static'
 AZURE_CONTAINER = 'media'
+DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 
 # Static files (CSS, JavaScript, Images)
