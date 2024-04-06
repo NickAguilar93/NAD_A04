@@ -29,7 +29,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-nrs6_%)*gk_ae65oos!60=1$(o2!nq!6mh%k1x$fhaa^j)5r(*'
 SECRET_KEY = os.environ['SECRET_KEY']
 
 ALLOWED_HOSTS = ['nad-django-a4.azurewebsites.net']
