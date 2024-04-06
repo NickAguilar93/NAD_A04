@@ -31,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-nrs6_%)*gk_ae65oos!60=1$(o2!nq!6mh%k1x$fhaa^j)5r(*'
 
-# ALLOWED_HOSTS = ['nad-django-a4.azurewebsites.net']
+ALLOWED_HOSTS = ['nad-django-a4.azurewebsites.net']
 
 
 # Application definition
@@ -173,18 +173,18 @@ SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
 AZURE_ACCOUNT_NAME = 'blob04'
 AZURE_ACCOUNT_KEY = 'l+qhd15lr6r1AbMxW0ZbhlSMWT8kEodJ1zcyS5stKfI5pRMijRpARoGHwyzRw6ApGyV0w0MZxjjP+AStaDqJYw=='
-AZURE_MEDIA_CONTAINER = 'media'
+AZURE_CONTAINER = 'media'
 AZURE_STATIC_CONTAINER = 'static'
 DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 
+# Static files (CSS, JavaScript, Images)
 STATIC_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{AZURE_STATIC_CONTAINER}/'
 
 # Media files (uploads)
-MEDIA_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{AZURE_MEDIA_CONTAINER}/'
+MEDIA_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{AZURE_CONTAINER}/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
