@@ -25,7 +25,7 @@ urlpatterns = [
     path('', include('posts.urls', namespace='posts')),
     path('profiles/', include('profiles.urls', namespace='profiles')),
     path('favicon.ico', RedirectView.as_view(url='/static/favicon.ico'))
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
