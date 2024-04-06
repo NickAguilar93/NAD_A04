@@ -171,7 +171,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 AZURE_ACCOUNT_NAME = 'blob04'
 AZURE_ACCOUNT_KEY = 'l+qhd15lr6r1AbMxW0ZbhlSMWT8kEodJ1zcyS5stKfI5pRMijRpARoGHwyzRw6ApGyV0w0MZxjjP+AStaDqJYw=='
