@@ -16,7 +16,7 @@ from pathlib import Path
 
 # Configure the domain name using the environment variable
 # that Azure automatically creates for us.
-ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
+# ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
 CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
 DEBUG = False
 
@@ -31,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-nrs6_%)*gk_ae65oos!60=1$(o2!nq!6mh%k1x$fhaa^j)5r(*'
 
-# ALLOWED_HOSTS = ['nad-django-a4.azurewebsites.net']
+ALLOWED_HOSTS = ['nad-django-a4.azurewebsites.net']
 
 
 # Application definition
