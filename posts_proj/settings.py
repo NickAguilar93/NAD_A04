@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 
 from .settings import *  # noqa
-from .settings import BASE_DIR
 from pathlib import Path
 
 # Configure the domain name using the environment variable
