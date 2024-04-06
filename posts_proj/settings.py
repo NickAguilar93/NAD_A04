@@ -177,7 +177,6 @@ AZURE_ACCOUNT_NAME = 'blob04'
 AZURE_ACCOUNT_KEY = 'l+qhd15lr6r1AbMxW0ZbhlSMWT8kEodJ1zcyS5stKfI5pRMijRpARoGHwyzRw6ApGyV0w0MZxjjP+AStaDqJYw=='
 AZURE_CONTAINER = 'media'
 AZURE_STATIC_CONTAINER = 'static'
-DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 
 # Static files (CSS, JavaScript, Images)
@@ -186,7 +185,6 @@ STATIC_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{AZURE_STATIC_
 # Media files (uploads)
 MEDIA_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{AZURE_CONTAINER}/'
 
-# Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
