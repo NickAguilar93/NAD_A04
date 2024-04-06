@@ -178,7 +178,7 @@ AZURE_ACCOUNT_KEY = 'l+qhd15lr6r1AbMxW0ZbhlSMWT8kEodJ1zcyS5stKfI5pRMijRpARoGHwyz
 AZURE_CONTAINER = 'media'
 AZURE_STATIC_CONTAINER = 'static'
 DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
-STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStaticStorage'
+STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{AZURE_STATIC_CONTAINER}/'
